@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "[slug].2d232696.css",
+  "sources": [
+    "../../../../../../../src/components/Bio.svelte",
+    "../../../../../../../src/routes/blog/[slug].svelte"
+  ],
+  "sourcesContent": [
+    "<style>\n  div {\n    align-items: center;\n    display: flex;\n  }\n\n  img {\n    width: 100px;\n    height: 100px;\n    border-radius: 100px;\n    /* border: 3px solid #fd6378; */\n    display: block;\n    margin-right: 20px;\n  }\n\n  p {\n    font-size: 1.125rem;\n  }\n</style>\n\n<div>\n  <img src=\"profile-pic.png\" alt=\"Maxi Ferreira\">\n  <p>\n    Hi, I'm <strong>Maxi</strong>. I'm a software engineer and data scientist from Córdoba, Argentina.\n    You can follow me on <a href=\"https://www.twitter.com/Charca\" target=\"_blank\">Twitter</a>,\n    see some of my work on <a href=\"https://www.github.com/Charca\" target=\"_blank\">GitHub</a>,\n    or read more about me on <a href=\"https://www.maxiferreira.com\" target=\"_blank\">my website</a>.\n  </p>\n</div>\n",
+    "<script context=\"module\">\n  export async function preload({ params, query }) {\n    // the `slug` parameter is available because\n    // this file is called [slug].html\n    const res = await this.fetch(`blog/${params.slug}.json`);\n    const data = await res.json();\n\n    if (res.status === 200) {\n      return { post: data };\n    } else {\n      this.error(res.status, data.message);\n    }\n  }\n</script>\n\n<script>\n  import Bio from '../../components/Bio.svelte'\n  export let post\n</script>\n\n<style>\n  header {\n    text-align: center;\n  }\n\n  header h1 {\n    margin-bottom: 0.7em;\n  }\n\n  header p {\n    color: #AAA;\n    text-transform: uppercase;\n    font-family: Rubik, sans-serif;\n    font-weight: 600;\n  }\n\n  header hr {\n    min-width: 100px;\n    width: 30%;\n  }\n</style>\n\n<svelte:head>\n  <title>{post.title}</title>\n</svelte:head>\n\n<header>\n  <p>{post.printDate} ~ {post.printReadingTime}</p>\n  <h1>{post.title}</h1>\n  <hr />\n</header>\n<div class=\"container\">\n  <article class=\"content\">\n    {@html post.html}\n  </article>\n  <hr />\n  <Bio />\n</div>\n"
+  ],
+  "names": [],
+  "mappings": "AACE,GAAG,eAAC,CAAC,AACH,WAAW,CAAE,MAAM,CACnB,OAAO,CAAE,IAAI,AACf,CAAC,AAED,GAAG,eAAC,CAAC,AACH,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,aAAa,CAAE,KAAK,CAEpB,OAAO,CAAE,KAAK,CACd,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,CAAC,eAAC,CAAC,AACD,SAAS,CAAE,QAAQ,AACrB,CAAC;ACID,MAAM,eAAC,CAAC,AACN,UAAU,CAAE,MAAM,AACpB,CAAC,AAED,qBAAM,CAAC,EAAE,eAAC,CAAC,AACT,aAAa,CAAE,KAAK,AACtB,CAAC,AAED,qBAAM,CAAC,CAAC,eAAC,CAAC,AACR,KAAK,CAAE,IAAI,CACX,cAAc,CAAE,SAAS,CACzB,WAAW,CAAE,KAAK,CAAC,CAAC,UAAU,CAC9B,WAAW,CAAE,GAAG,AAClB,CAAC,AAED,qBAAM,CAAC,EAAE,eAAC,CAAC,AACT,SAAS,CAAE,KAAK,CAChB,KAAK,CAAE,GAAG,AACZ,CAAC"
+}

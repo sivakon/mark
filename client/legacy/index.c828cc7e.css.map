@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "index.c828cc7e.css",
+  "sources": [
+    "../../../../../../../src/routes/blog/index.svelte"
+  ],
+  "sourcesContent": [
+    "<script context=\"module\">\n  export function preload({ params, query }) {\n    return this.fetch(`blog.json`).then(r => r.json()).then(posts => {\n      return { posts };\n    });\n  }\n</script>\n\n<script>\n  export let posts;\n</script>\n\n<style>\n  h2,\n  .post-item-footer {\n    font-family: Rubik, sans-serif;\n    font-weight: 700;\n  }\n\n  .post-item-date {\n    color: #AAA;\n    text-align: left;\n    text-transform: uppercase;\n    margin-right: 16px;\n  }\n\n  hr {\n    margin: 60px auto;\n  }\n</style>\n\n<svelte:head>\n  <title>Blog</title>\n</svelte:head>\n\n<div class=\"container\">\n  <h1>Blog</h1>\n  {#each posts as post, index}\n    {#if index}\n      <hr />\n    {/if}\n    <div class=\"post-item\">\n      <h2>\n        <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>\n      </h2>\n      <p>{post.excerpt}</p>\n      <div class=\"post-item-footer\">\n        <span class=\"post-item-date\">— {post.printDate}</span>\n      </div>\n    </div>\n  {/each}\n</div>\n"
+  ],
+  "names": [],
+  "mappings": "AAaE,gBAAE,CACF,iBAAiB,cAAC,CAAC,AACjB,WAAW,CAAE,KAAK,CAAC,CAAC,UAAU,CAC9B,WAAW,CAAE,GAAG,AAClB,CAAC,AAED,eAAe,cAAC,CAAC,AACf,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,IAAI,CAChB,cAAc,CAAE,SAAS,CACzB,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,EAAE,cAAC,CAAC,AACF,MAAM,CAAE,IAAI,CAAC,IAAI,AACnB,CAAC"
+}
