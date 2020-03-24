@@ -2,7 +2,6 @@
 
 https://dev.to/pixeline/how-to-deploy-a-sapper-pwa-on-github-pages-47lc
 
-
 # sapper-blog-template
 
 A starter template for building markdown-powered blogs with [Sapper](https://github.com/sveltejs/sapper) and [Svelte](https://github.com/sveltejs/svelte).
