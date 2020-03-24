@@ -6,6 +6,6 @@
   }
 </style>
 
-<a href="/">
+<a href="/mark">
   <img alt="Sapper" src='logo-192.png'>
 </a>
