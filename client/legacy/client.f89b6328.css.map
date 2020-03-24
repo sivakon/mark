@@ -1,12 +1,12 @@
 {
   "version": 3,
-  "file": "main.2253938942.css",
+  "file": "client.f89b6328.css",
   "sources": [
-    "../../../../../../src/components/Logo.svelte",
-    "../../../../../../src/components/Nav.svelte",
-    "../../../../../../src/components/Header.svelte",
-    "../../../../../../src/routes/_layout.svelte",
-    "../../../../../../src/routes/_error.svelte"
+    "../../../../../../../src/components/Logo.svelte",
+    "../../../../../../../src/components/Nav.svelte",
+    "../../../../../../../src/components/Header.svelte",
+    "../../../../../../../src/routes/_layout.svelte",
+    "../../../../../../../src/routes/_error.svelte"
   ],
   "sourcesContent": [
     "<style>\n  img {\n    display: block;\n    height: 50px;\n    width: 50px;\n  }\n</style>\n\n<a href=\"/mark\">\n  <img alt=\"Sapper\" src='logo-192.png'>\n</a>\n",
